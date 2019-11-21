@@ -1,0 +1,16 @@
+server:
+  port: 8092
+
+logging:
+  level:
+    root: WARN
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+    org.springframework.security.oauth2: INFO
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+      jwk:
+        key-set-uri: http://auth-server:8090/oauth2/keys
